@@ -26,14 +26,8 @@ describe('Thermostat', function(){
 			expect(thermostat.temperature).toEqual(19);
 		});
 
-		it("should have a maximum temperature of 32", function(){
-			expect(thermostat.maximumTemperature).toEqual(32)
-		});
-
-		it("should not be able to increase more than 32", function(){
-			thermostat.increaseTemperatureBy(12)
-			thermostat.increaseTemperature();
-			expect(thermostat.temperature).toEqual(32)
+		it("should have a maximum temperature of 25", function(){
+			expect(thermostat.maximumTemperature).toEqual(25)
 		});
 
 		it("should not be able to decrease more than 10 degrees", function(){
@@ -42,9 +36,16 @@ describe('Thermostat', function(){
 			expect(thermostat.temperature).toEqual(10)
 		});
 
+		it("should be able to reset temp to 20 by hitting reset button", function(){
+			thermostat.increaseTemperatureBy(2)
+			thermostat.resetTemperature()
+			expect(thermostat.temperature).toEqual(20)
+		});
+
 	});
 
 	describe('custom options', function(){
+
 		it('can increase the temp by 12', function(){
 			thermostat.increaseTemperatureBy(12);
 			expect(thermostat.temperature).toEqual(32);
@@ -58,5 +59,35 @@ describe('Thermostat', function(){
 		});
 
 	});
+
+	describe('power saving mode', function(){
+
+		it('should be able to turn power saving mode off', function(){
+			thermostat.powerSaverOff()
+			expect(thermostat.isPowerSaverOn).toEqual(false)
+		});
+
+		it('should be able to turn power saving mode off', function(){
+			thermostat.powerSaverOff()
+			thermostat.powerSaverOn()
+			expect(thermostat.isPowerSaverOn).toEqual(true)
+		});
+
+		it('should have a max temperature of 32 when powerSavingMode is off', function(){
+			thermostat.powerSaverOff()
+			thermostat.increaseTemperatureBy(12)
+			thermostat.increaseTemperature()
+			expect(thermostat.temperature).toEqual(32)
+		});
+
+	});
+
+	describe('temperature colour bands', function(){
+
+			it()
+
+	});
+
+
 
 });
