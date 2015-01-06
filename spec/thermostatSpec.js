@@ -49,13 +49,11 @@ describe('Thermostat', function(){
 		it('can increase the temp by 12', function(){
 			thermostat.increaseTemperatureBy(12);
 			expect(thermostat.temperature).toEqual(32);
-
 		});
 
 		it('can decrease the temp by 8', function(){
 			thermostat.decreaseTemperatureBy(8);
 			expect(thermostat.temperature).toEqual(12);
-
 		});
 
 	});
