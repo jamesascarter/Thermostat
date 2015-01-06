@@ -13,7 +13,7 @@ describe('Thermostat', function(){
 		});
 
 		it('is set to power saving mode', function(){
-			expect(thermostat.isPowerSaverOn).toBe(true);
+			expect(thermostat.isPowerSaverOn).toBe("powerSaver On");
 		});
 
 		it('can increase the temp. by one degree', function(){
@@ -64,13 +64,13 @@ describe('Thermostat', function(){
 
 		it('should be able to turn power saving mode off', function(){
 			thermostat.powerSaverOff()
-			expect(thermostat.isPowerSaverOn).toEqual(false)
+			expect(thermostat.isPowerSaverOn).toEqual("powerSaver Off")
 		});
 
 		it('should be able to turn power saving mode off', function(){
 			thermostat.powerSaverOff()
 			thermostat.powerSaverOn()
-			expect(thermostat.isPowerSaverOn).toEqual(true)
+			expect(thermostat.isPowerSaverOn).toEqual("powerSaver On")
 		});
 
 		it('should have a max temperature of 32 when powerSavingMode is off', function(){
@@ -81,13 +81,5 @@ describe('Thermostat', function(){
 		});
 
 	});
-
-	describe('temperature colour bands', function(){
-
-			it()
-
-	});
-
-
 
 });
