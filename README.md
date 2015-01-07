@@ -1,5 +1,6 @@
-Thermostat
-==========
+### Thermostat
+
+Task set by Makers Academy requires me to:
 
 Specification:
 
@@ -16,3 +17,53 @@ Specification:
   - < 18 is green,
   - < 25 is yellow,
   - otherwise red
+
+### Tech
+
+* Javascript
+* Jasmine (testing)
+* Dillinger - Markdown Editor
+* jQuery
+* HTML/CSS
+* MyWeather2 API
+
+### How to use
+
+Clone this repo:
+```sh
+$ git clone https://github.com/jamesascarter/Thermostat.git
+```
+
+Change into the directory:
+```sh
+$ cd Thermostat
+```
+
+To run the Jasmine tests:
+```sh
+$ open SpecRunner.html
+```
+
+To run the code (e.g Perfect Game):
+
+
+```sh
+ruby server.rb
+    
+```
+Then view on local host provided in your browser.
+
+### Improvements
+
+*  Styling requires more work.
+* Could also isolate data from the myWeather2 API. For example only show temperatures.
+
+
+
+
+
+
+
+
+
+
