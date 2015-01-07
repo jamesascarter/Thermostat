@@ -1,20 +1,18 @@
 <html>
 <head>
 	<title>Thermostat</title>
+	<link rel="stylesheet" href="/css/style.css" type="text/css" media="all" />
 </head>
 <body>
 		
-<section class="outdoor_temperature">
-<h1>The temperature outside is: </h1> <h2></h2>
-</section>
 	
 			<section class='thermostat'>
 
-				<h1>20</h1>
+						<h1>20</h1>
 						<h2>powerSaver On</h2>
 
-							<a href="#" class='increase_temp'>+</a>
-							<a href="#" class='decrease_temp'>-</a>
+							<a href="#" class='increase_temp'><img id="increase_temp" src="images/up.png"></a>
+							<a href="#" class='decrease_temp'><img id="decrease_temp" src="images/down.png"></a>
 							<a href="#" class='reset_temp'>Reset</a>
 							<a href="#" class='power_saver_off'>Power saver off</a>
 							<a href="#" class='power_saver_on'>Power saver on</a>
@@ -23,8 +21,8 @@
 
 
 				<script src='jQuery.js'></script>
-				<script src='interface.js'></script>
-				<script src='thermostat.js'></script>
+				<script src='js/interface.js'></script>
+				<script src='js/thermostat.js'></script>
 </body>
 
 
